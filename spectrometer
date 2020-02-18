@@ -1,0 +1,57 @@
+#include "AS726X.h"
+AS726X sensor;
+
+void setup() {
+  sensor.begin();
+}
+
+void loop() {
+  Serial.print("Spectrometer Module; ");
+  sensor.takeMeasurements();
+  float getCalibratedViolet();
+  float getCalibratedBlue();
+  float getCalibratedGreen();
+  float getCalibratedYellow();
+  float getCalibratedOrange();
+  float getCalibratedRed();
+  float getCalibratedR();
+  float getCalibratedS();
+  float getCalibratedT();
+  float getCalibratedU();
+  float getCalibratedV();
+  float getCalibratedW();
+    {
+  // vis readings
+      Serial.print("{\"module\":\"Spectrometer\",\"data\":{\"V\":\"");
+      Serial.print(getCalibratedViolet(), 2);
+      Serial.print("\", \"B\":\"");
+      Serial.print(getCalibratedBlue(), 2);
+      Serial.print("\", \"G\":\"");
+      Serial.print(getCalibratedGreen(), 2);
+      Serial.print("\", \"Y\":\"");
+      Serial.print(getCalibratedYellow(), 2);
+      Serial.print("\", \"O\":\"");
+      Serial.print(getCalibratedOrange(), 2);
+      Serial.print("\", \"R\":\"");
+      Serial.print(getCalibratedRed(), 2);
+      Serial.println("\"}");
+   }
+  // else if (_sensorVersion == SENSORTYPE_AS7263)
+  // {
+  //Near IR readings
+  //   Serial.print("{\"module\":\"Spectrometer\",\"data\":{\"R\":\"");
+  //   Serial.print(getCalibratedR(), 2);
+  //   Serial.print("\", \"S\":\"");
+  //   Serial.print(getCalibratedS(), 2);
+  //   Serial.print("\", \"T\":\"");
+  //    Serial.print(getCalibratedT(), 2);
+  //  Serial.print("\", \"U\":\"");
+  //   Serial.print(getCalibratedU(), 2);
+  //   Serial.print("\", \"V\":\"");
+  //   Serial.print(getCalibratedV(), 2);
+  //  Serial.print("\", \"W\":\"");
+  //  Serial.print(getCalibratedW(), 2);
+  //  Serial.println("\"}");
+  //  }
+
+}
